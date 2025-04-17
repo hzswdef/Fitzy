@@ -1,0 +1,17 @@
+uuid: 24de1c34-98a3-477e-9bc1-019430dbf867
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+_core:
+  default_config_hash: mZLyuWM9CQx2ZJVqFGSbzgFnHzudVbHBYmdU256A5Wk
+id: user.user.default
+targetEntityType: user
+bundle: user
+mode: default
+content:
+  member_for:
+    weight: 5
+    region: content
+hidden: {  }

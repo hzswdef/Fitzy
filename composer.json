@@ -1,0 +1,92 @@
+{
+	"name": "hzswdef/fitzy",
+	"description": "E-commerce clothing store prototype using Drupal + Next.js.",
+	"type": "project",
+	"license": "MIT",
+	"homepage": "https://github.com/hzswdef/Fitzy",
+	"repositories": [
+		{
+			"type": "composer",
+			"url": "https://packages.drupal.org/8"
+		}
+	],
+	"require": {
+		"composer/installers": "^2.3",
+		"drupal/admin_toolbar": "^3.5",
+		"drupal/core-composer-scaffold": "^11.1",
+		"drupal/core-project-message": "^11.1",
+		"drupal/core-recommended": "^11.1",
+		"drupal/gin": "^4.0",
+		"drupal/gin_toolbar": "^2.0",
+		"drupal/imagemagick": "^4.0",
+		"drupal/queue_ui": "^3.2",
+		"drupal/ultimate_cron": "^2.0@beta",
+		"drush/drush": "^13.5"
+	},
+	"conflict": {
+		"drupal/drupal": "*"
+	},
+	"minimum-stability": "dev",
+	"prefer-stable": true,
+	"config": {
+		"allow-plugins": {
+			"composer/installers": true,
+			"drupal/core-composer-scaffold": true,
+			"drupal/core-project-message": true,
+			"phpstan/extension-installer": true,
+			"dealerdirect/phpcodesniffer-composer-installer": true,
+			"php-http/discovery": true
+		},
+		"sort-packages": true
+	},
+	"extra": {
+		"drupal-scaffold": {
+			"locations": {
+				"web-root": "web/"
+			},
+			"file-mapping": {
+				"[project-root]/recipes/README.txt": false,
+				"[project-root]/.editorconfig": "assets/scaffold/.editorconfig",
+				"[web-root]/INSTALL.txt": false,
+				"[web-root]/README.md": false,
+				"[web-root]/sites/README.txt": false,
+				"[web-root]/sites/development.services.yml": false,
+				"[web-root]/modules/README.txt": false,
+				"[web-root]/profiles/README.txt": false,
+				"[web-root]/themes/README.txt": false
+			}
+		},
+		"installer-paths": {
+			"web/core": [
+				"type:drupal-core"
+			],
+			"web/libraries/{$name}": [
+				"type:drupal-library"
+			],
+			"web/modules/contrib/{$name}": [
+				"type:drupal-module"
+			],
+			"web/profiles/contrib/{$name}": [
+				"type:drupal-profile"
+			],
+			"web/themes/contrib/{$name}": [
+				"type:drupal-theme"
+			],
+			"drush/Commands/contrib/{$name}": [
+				"type:drupal-drush"
+			],
+			"web/modules/custom/{$name}": [
+				"type:drupal-custom-module"
+			],
+			"web/profiles/custom/{$name}": [
+				"type:drupal-custom-profile"
+			],
+			"web/themes/custom/{$name}": [
+				"type:drupal-custom-theme"
+			],
+			"recipes/{$name}": [
+				"type:drupal-recipe"
+			]
+		}
+	}
+}
